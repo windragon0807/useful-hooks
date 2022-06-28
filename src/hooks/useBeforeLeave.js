@@ -16,12 +16,12 @@ export const useBeforeLeave = (onBefore) => {
     }, []);
 }
 
-const App = () => {
-    const begForLife = () => console.log("Pls dont leave");
-    useBeforeLeave(begForLife);
-    return (
-        <div className='App'>
-            <div>Hi</div>
-        </div>
-    )
-}
+// const App = () => {
+//     const begForLife = () => console.log("Pls dont leave");
+//     useBeforeLeave(begForLife);
+//     return (
+//         <div className='App'>
+//             <div>Hi</div>
+//         </div>
+//     )
+// }
