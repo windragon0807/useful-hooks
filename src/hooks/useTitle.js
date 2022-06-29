@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
+// Hook
 export const useTitle = initialTitle => {
     const [title, setTitle] = useState(initialTitle);
     const updateTitle = () => {
@@ -9,13 +9,13 @@ export const useTitle = initialTitle => {
     useEffect(updateTitle, [title]);
     return setTitle;
 }
-
-// const App = () => {
-//     const titleUpdater = useTitle("Loading...");
-//     setTimeout(() => titleUpdater("Home"), 5000);
-//     return (
-//         <div className='App'>
-//             <div>Hi</div>
-//         </div>
-//     )
-// }
+// Usage
+const App = () => {
+    const titleUpdater = useTitle("Loading...");
+    setTimeout(() => titleUpdater("Home"), 5000);
+    return (
+        <div className='App'>
+            <div>Hi</div>
+        </div>
+    )
+}

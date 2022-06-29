@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-
+import { useEffect, useRef } from "react";
+// Hook
 export const useClick = onClick => {
     if (typeof onClick !== 'function') {
         return;
@@ -17,13 +17,13 @@ export const useClick = onClick => {
     }, []);
     return element;
 };
-
-// const App = () => {
-//     const sayHello = () => console.log("say hello");
-//     const title = useClick(sayHello);
-//     return (
-//         <div className='App'>
-//             <h1 ref={title}>Hi</h1>
-//         </div>
-//     );
-// }
+// Usage
+const App = () => {
+    const sayHello = () => console.log("say hello");
+    const title = useClick(sayHello);
+    return (
+        <div className='App'>
+            <h1 ref={title}>Hi</h1>
+        </div>
+    );
+}

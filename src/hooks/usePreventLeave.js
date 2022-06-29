@@ -1,10 +1,9 @@
-import React from "react";
-
 /*
     현재 창에서 벗어나려고 할 때,
     Protect 버튼을 누른 후, 창을 나가면 크롬 메시지가 등장하며,
     Unprotect 버튼을 누른 후, 창을 나가면 크롬 메시지가 등장하지 않는다.
 */
+// Hook
 export const usePreventLeave = () => {
     const listener = (event) => {
         event.preventDefault();
@@ -14,7 +13,7 @@ export const usePreventLeave = () => {
     const disablePrevent = () => window.removeEventListener('beforeunload', listener);
     return { enablePrevent, disablePrevent };
 }
-
+// Usage
 const App = () => {
     const { enablePrevent, disablePrevent } = usePreventLeave();
     return (

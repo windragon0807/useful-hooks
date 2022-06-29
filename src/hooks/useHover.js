@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-
+import { useEffect, useRef } from "react";
+// Hook
 export const useHover = onHover => {
     if (typeof onHover !== 'function') {
         return;
@@ -17,13 +17,13 @@ export const useHover = onHover => {
     }, []);
     return element;
 };
-
-// const App = () => {
-//     const sayHello = () => console.log("say hello");
-//     const title = useHover(sayHello);
-//     return (
-//         <div className='App'>
-//             <h1 ref={title}>Hi</h1>
-//         </div>
-//     );
-// }
+// Usage
+const App = () => {
+    const sayHello = () => console.log("say hello");
+    const title = useHover(sayHello);
+    return (
+        <div className='App'>
+            <h1 ref={title}>Hi</h1>
+        </div>
+    );
+}

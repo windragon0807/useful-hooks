@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-
+import { useRef } from "react";
+// Hook
 export const useFullscreen = callback => {
     const element = useRef();
     const runCb = isFull => {
@@ -36,7 +36,7 @@ export const useFullscreen = callback => {
     };
     return { element, triggerFull, exitFull };
 };
-
+// Usage
 const App = () => {
     const onChange = isFull =>
         console.log(isFull ? "We are in Fullscreen" : "We are not in Fullscreen");

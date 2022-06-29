@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+// Hook
 export const useScroll = () => {
     const [ state, setState ] = useState({
         x: 0,
@@ -14,7 +14,7 @@ export const useScroll = () => {
     })
     return state;
 }
-
+// Usage
 const App = () => {
     const { y } = useScroll();
     return (

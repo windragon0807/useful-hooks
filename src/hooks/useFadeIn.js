@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-
+import { useEffect } from "react";
+// Hook
 export const useFadeIn = (duration = 1, delay = 0) => {
     if (typeof duration !== 'number' || typeof delay !== 'number') {
         return;
@@ -14,7 +14,7 @@ export const useFadeIn = (duration = 1, delay = 0) => {
     }, []);
     return { ref: element, style: { opacity: 0 }};
 }
-
+// Usage
 const App = () => {
     const fadeInH1 = useFadeIn(1, 2);
     return (

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react";
+// Hook
 export const useNetwork = onChange => {
     const [status, setStatus] = useState(navigator.onLine);
     const handleChange = () => {
@@ -18,7 +18,7 @@ export const useNetwork = onChange => {
     }, []);
     return status;
 }
-
+// Usage
 const App = () => {
     const handleNetworkChange = (online) => {
         console.log(online ? "We just went online" : "We are offline");
